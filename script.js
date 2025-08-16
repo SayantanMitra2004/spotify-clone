@@ -17,7 +17,7 @@ const playByIndex = (index, songs, folder) => {
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`http://127.0.0.1:3000/songs/${folder}`);
+    let a = await fetch(`/songs/${folder}`);
     let response = await a.text();
 
     let div = document.createElement("div");
@@ -76,7 +76,7 @@ async function loadSongs(folder) {
 
 
 async function displayFolders() {
-    let a = await fetch(`http://127.0.0.1:3000/songs/`);
+    let a = await fetch(`/songs/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -86,7 +86,7 @@ async function displayFolders() {
     Array.from(anchors).forEach(async e => {
         if (e.href.includes("/songs")) {
             let folder = e.href.split("/").slice(-2)[0];
-            let a = await fetch(`http://127.0.0.1:3000/songs/${folder}/info.json`);
+            let a = await fetch(`/songs/${folder}/info.json`);
             let response = await a.json();
 
             let card = document.createElement("div");
