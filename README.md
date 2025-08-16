@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 019cb5eddb97384c91388419fca96393b6ffb0b7
 # 🎵 Spotify Clone (Frontend Only)
 
 A sleek **Spotify clone** built with **HTML, CSS, and JavaScript**.  
@@ -89,3 +93,10 @@ This is a **basic clone** for learning purposes – it does **not** include:
 Made with ❤️ by **Sayantan Mitra**
 
 If you found this useful, consider ⭐ starring the repo!
+<<<<<<< HEAD
+=======
+=======
+# spotify-clone
+A basic Spotify clone built with HTML, CSS, and JavaScript, focusing only on frontend and client-side programming. It features playlists, play/pause controls, navigation, and responsive design. Made to practice and improve JavaScript and CSS skills, without any backend or database.
+>>>>>>> bae55b2746657553145641379ce3bfba705db9db
+>>>>>>> 019cb5eddb97384c91388419fca96393b6ffb0b7
