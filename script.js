@@ -17,23 +17,17 @@ const playByIndex = (index, songs, folder) => {
 
 async function getSongs(folder) {
     currFolder = folder;
-    try {
-        // fetch songs.json from the folder
-        let response = await fetch(`/songs/${folder}/songs.json`);
-        if (!response.ok) {
-            throw new Error(`Failed to load songs.json for folder: ${folder}`);
-        }
+    let a = await fetch(`http://127.0.0.1:3000/songs/${folder}`);
+    let response = await a.text();
 
-        let songs = await response.json();
+    let div = document.createElement("div");
+    div.innerHTML = response;
+    let as = div.getElementsByTagName("a");
 
-        // mimic your old return style: array of filenames only
-        return songs.filter(song => song.endsWith(".mp3"));
-    } catch (error) {
-        console.error("Error fetching songs:", error);
-        return [];
-    }
+    return Array.from(as)
+        .filter(el => el.href.endsWith(".mp3"))
+        .map(el => el.href.split(`/${folder}/`)[1]);
 }
-
 
 const formatTime = (seconds) => {
     let mins = Math.floor(seconds / 60) || 0;
@@ -82,7 +76,7 @@ async function loadSongs(folder) {
 
 
 async function displayFolders() {
-    let a = await fetch(`/songs/`);
+    let a = await fetch(`http://127.0.0.1:3000/songs/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -92,7 +86,7 @@ async function displayFolders() {
     Array.from(anchors).forEach(async e => {
         if (e.href.includes("/songs")) {
             let folder = e.href.split("/").slice(-2)[0];
-            let a = await fetch(`/songs/${folder}/info.json`);
+            let a = await fetch(`http://127.0.0.1:3000/songs/${folder}/info.json`);
             let response = await a.json();
 
             let card = document.createElement("div");
