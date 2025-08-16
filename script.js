@@ -17,17 +17,23 @@ const playByIndex = (index, songs, folder) => {
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`/songs/${folder}`);
-    let response = await a.text();
+    try {
+        // fetch songs.json from the folder
+        let response = await fetch(`/songs/${folder}/songs.json`);
+        if (!response.ok) {
+            throw new Error(`Failed to load songs.json for folder: ${folder}`);
+        }
 
-    let div = document.createElement("div");
-    div.innerHTML = response;
-    let as = div.getElementsByTagName("a");
+        let songs = await response.json();
 
-    return Array.from(as)
-        .filter(el => el.href.endsWith(".mp3"))
-        .map(el => el.href.split(`/${folder}/`)[1]);
+        // mimic your old return style: array of filenames only
+        return songs.filter(song => song.endsWith(".mp3"));
+    } catch (error) {
+        console.error("Error fetching songs:", error);
+        return [];
+    }
 }
+
 
 const formatTime = (seconds) => {
     let mins = Math.floor(seconds / 60) || 0;
