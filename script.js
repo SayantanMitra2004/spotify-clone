@@ -1,32 +1,28 @@
 let currSong = new Audio();
 let currFolder;
-let allSongs = []
+let allSongs = [];
+let songsMapping = {};
 
 // 🔹 utility to clean song name
-const getCleanName = (file) =>
-    decodeURIComponent(file).replace(".mp3", "").split("(")[0].trim();
+const getCleanName = (name) => name.split("(")[0].trim();
 
 // 🔹 utility to play song by index
 const playByIndex = (index, songs, folder) => {
-    let songURL = `/songs/${folder}/${songs[index]}`;
-    let cleanName = getCleanName(songs[index]);
-
+    const song = songs[index];
     sessionStorage.setItem("currIndex", index);
-    playMusic(songURL, cleanName);
+    playMusic(song.path, song.name);
 };
 
-async function getSongs(folder) {
-    currFolder = folder;
-    let a = await fetch(`/songs/${folder}`);
-    let response = await a.text();
-
-    let div = document.createElement("div");
-    div.innerHTML = response;
-    let as = div.getElementsByTagName("a");
-
-    return Array.from(as)
-        .filter(el => el.href.endsWith(".mp3"))
-        .map(el => el.href.split(`/${folder}/`)[1]);
+// Load songs mapping from the centralized file
+async function loadSongsMapping() {
+    try {
+        const response = await fetch('/songs_mapping.json');
+        songsMapping = await response.json();
+        return songsMapping;
+    } catch (error) {
+        console.error('Error loading songs mapping:', error);
+        return {};
+    }
 }
 
 const formatTime = (seconds) => {
@@ -45,20 +41,25 @@ const playMusic = (track, songName) => {
 
 async function loadSongs(folder) {
     currFolder = folder;
-    allSongs = await getSongs(folder);  // ✅ store globally
+    const folderData = songsMapping[folder];
+    if (!folderData) {
+        console.error(`No data found for folder: ${folder}`);
+        return [];
+    }
 
+    allSongs = folderData.songs || [];
     let songUL = document.querySelector(".songList ul");
     songUL.innerHTML = "";
 
     allSongs.forEach((song, index) => {
-        let cleanName = getCleanName(song);
+        let cleanName = getCleanName(song.name);
 
         songUL.innerHTML += `
             <li>
                 <img class="invert" src="images/music.svg" alt="">
                 <div class="info">
                     <div>${cleanName}</div>
-                    <div>Sayantan</div>
+                    <div>${folderData.artist || 'Unknown Artist'}</div>
                 </div>
                 <div class="playnow justify-content align gap-1">
                     <span>Play Now</span>
@@ -76,43 +77,43 @@ async function loadSongs(folder) {
 
 
 async function displayFolders() {
-    let a = await fetch(`/songs/`);
-    let response = await a.text();
-    let div = document.createElement("div");
-    div.innerHTML = response;
-    let anchors = div.getElementsByTagName("a");
-    let cardContainer = document.querySelector(".cardContainer");
+    const cardContainer = document.querySelector(".cardContainer");
+    cardContainer.innerHTML = ''; // Clear existing cards
 
-    Array.from(anchors).forEach(async e => {
-        if (e.href.includes("/songs")) {
-            let folder = e.href.split("/").slice(-2)[0];
-            let a = await fetch(`/songs/${folder}/info.json`);
-            let response = await a.json();
+    for (const [folder, data] of Object.entries(songsMapping)) {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.dataset.folder = folder;
+        
+        card.innerHTML = `
+            <img src="${data.cover}" alt="${data.title}">
+            <h2>${data.title}</h2>
+            <p>${data.description}</p>
+            <button class="play-btn"><img src="images/play.svg" alt="playButton"></button>
+        `;
 
-            let card = document.createElement("div");
-            card.classList.add("card");
-            card.dataset.folder = folder;
-            card.innerHTML = `
-                <img src="/songs/${folder}/cover.jpg" alt="">
-                <h2>${response.title}</h2>
-                <p>${response.description}</p>
-                <button class="play-btn"><img src="images/play.svg" alt="playButton"></button>
-            `;
+        // Play first song when card is clicked
+        card.addEventListener("click", async () => {
+            let songs = await loadSongs(folder);
+            if (songs.length > 0) playByIndex(0, songs, folder);
+        });
 
-            // play first song when card clicked
-            card.addEventListener("click", async () => {
-                let songs = await loadSongs(folder);
-                if (songs.length > 0) playByIndex(0, songs, folder);
-            });
-
-            cardContainer.appendChild(card);
-        }
-    });
+        cardContainer.appendChild(card);
+    }
 }
 
 async function main() {
-    let songs = await loadSongs("songs");
+    // Load the songs mapping first
+    await loadSongsMapping();
+    
+    // Display all available folders
     displayFolders();
+    
+    // Load the first folder's songs if available
+    const firstFolder = Object.keys(songsMapping)[0];
+    if (firstFolder) {
+        await loadSongs(firstFolder);
+    }
 
     const seekbar = document.querySelector(".seekbar");
     const circle = document.querySelector(".circle");

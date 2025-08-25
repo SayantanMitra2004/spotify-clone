@@ -1,0 +1,157 @@
+{
+  "banani": {
+    "title": "Banani's Favorites",
+    "description": "Experience the party mood with banani's favorites",
+    "cover": "songs/banani/cover.jpg",
+    "songs": [
+      {
+        "name": "Afghan Jalebi  FULL VIDEO Song  Phantom  Saif Ali Khan Katrina Kaif Pritam Asrar T-Series",
+        "file": "Afghan Jalebi (Ya Baba) FULL VIDEO Song  Phantom  Saif Ali Khan Katrina Kaif Pritam Asrar T-Series.mp3",
+        "path": "songs/banani/Afghan Jalebi (Ya Baba) FULL VIDEO Song  Phantom  Saif Ali Khan Katrina Kaif Pritam Asrar T-Series.mp3"
+      },
+      {
+        "name": "Character Dheela  Ready I Salman Khan I Zarine Khan  Pritam",
+        "file": "Character Dheela (Full Song) Ready I Salman Khan I Zarine Khan  Pritam.mp3",
+        "path": "songs/banani/Character Dheela (Full Song) Ready I Salman Khan I Zarine Khan  Pritam.mp3"
+      },
+      {
+        "name": "Jhuthi Khayi Thi Kasam Jo Nibhayi Nahi  Jhuthi Khayi Thi Kasam Pawan Singh Song 2024",
+        "file": "Jhuthi Khayi Thi Kasam Jo Nibhayi Nahi (Official Video) Jhuthi Khayi Thi Kasam Pawan Singh Song 2024.mp3",
+        "path": "songs/banani/Jhuthi Khayi Thi Kasam Jo Nibhayi Nahi (Official Video) Jhuthi Khayi Thi Kasam Pawan Singh Song 2024.mp3"
+      },
+      {
+        "name": "Mann Mera   Table No.21  Tina Desai & Rajeev Khandelwal",
+        "file": "Mann Mera (Video Song)  Table No.21  Tina Desai & Rajeev Khandelwal.mp3",
+        "path": "songs/banani/Mann Mera (Video Song)  Table No.21  Tina Desai & Rajeev Khandelwal.mp3"
+      },
+      {
+        "name": "Teri Deewani",
+        "file": "Teri Deewani.mp3",
+        "path": "songs/banani/Teri Deewani.mp3"
+      }
+    ]
+  },
+  "pritha": {
+    "title": "Melody of Pritha",
+    "description": "Enjoy the soothing melodies of pritha's choice with spotify",
+    "cover": "songs/pritha/cover.jpg",
+    "songs": [
+      {
+        "name": "Abhi Na Jao Chhod Kar",
+        "file": "Abhi Na Jao Chhod Kar.mp3",
+        "path": "songs/pritha/Abhi Na Jao Chhod Kar.mp3"
+      },
+      {
+        "name": "Chiro Odhora",
+        "file": "Chiro Odhora.mp3",
+        "path": "songs/pritha/Chiro Odhora.mp3"
+      },
+      {
+        "name": "Ed Sheeran",
+        "file": "Ed Sheeran.mp3",
+        "path": "songs/pritha/Ed Sheeran.mp3"
+      },
+      {
+        "name": "Raabta  Full Song With Lyrics  Agent Vinod  Saif Ali Khan, Kareena Kapoor,Pritam",
+        "file": "Raabta (Kehte Hain Khuda) Full Song With Lyrics  Agent Vinod  Saif Ali Khan, Kareena Kapoor,Pritam.mp3",
+        "path": "songs/pritha/Raabta (Kehte Hain Khuda) Full Song With Lyrics  Agent Vinod  Saif Ali Khan, Kareena Kapoor,Pritam.mp3"
+      },
+      {
+        "name": "Until I Found You",
+        "file": "Until I Found You.mp3",
+        "path": "songs/pritha/Until I Found You.mp3"
+      }
+    ]
+  },
+  "rupam": {
+    "title": "Hits of Rupam",
+    "description": "Listen the OG 20's of Rupam's Choice with Spotify",
+    "cover": "songs/rupam/cover.jpg",
+    "songs": [
+      {
+        "name": "Aisi Raaton  Anupam Roy",
+        "file": "Aisi Raaton  Anupam Roy (Official Music Video).mp3",
+        "path": "songs/rupam/Aisi Raaton  Anupam Roy (Official Music Video).mp3"
+      },
+      {
+        "name": "Kho Gaye Official Music Video  @MostlySane, Rohit Saraf & Taaruk Raina  Mismatched Season 2",
+        "file": "Kho Gaye Official Music Video  @MostlySane, Rohit Saraf & Taaruk Raina  Mismatched Season 2.mp3",
+        "path": "songs/rupam/Kho Gaye Official Music Video  @MostlySane, Rohit Saraf & Taaruk Raina  Mismatched Season 2.mp3"
+      },
+      {
+        "name": "Mujhe Peene Do - Darshan Raval  Official Music Video  Romantic Song 2020  Naushad Khan",
+        "file": "Mujhe Peene Do - Darshan Raval  Official Music Video  Romantic Song 2020  Naushad Khan.mp3",
+        "path": "songs/rupam/Mujhe Peene Do - Darshan Raval  Official Music Video  Romantic Song 2020  Naushad Khan.mp3"
+      },
+      {
+        "name": "Time Machine - Love Song  Shohorer Ushnotomo Dine  Lagnajita Chakraborty  Nabarun Bose  Akash",
+        "file": "Time Machine - Love Song  Shohorer Ushnotomo Dine  Lagnajita Chakraborty  Nabarun Bose  Akash.mp3",
+        "path": "songs/rupam/Time Machine - Love Song  Shohorer Ushnotomo Dine  Lagnajita Chakraborty  Nabarun Bose  Akash.mp3"
+      }
+    ]
+  },
+  "soumyadeepta": {
+    "title": "Soumyadeepta's Choice",
+    "description": "Enjoy soumadipta's unique and fantastic music choice with spotify",
+    "cover": "songs/soumyadeepta/cover.jpg",
+    "songs": [
+      {
+        "name": "'One Bottle Down' FULL VIDEO SONG  Yo Yo Honey Singh  T-SERIES",
+        "file": "'One Bottle Down' FULL VIDEO SONG  Yo Yo Honey Singh  T-SERIES.mp3",
+        "path": "songs/soumyadeepta/'One Bottle Down' FULL VIDEO SONG  Yo Yo Honey Singh  T-SERIES.mp3"
+      },
+      {
+        "name": "Abar Phire Ele   Dwitiyo Purush  Arijit Singh  Anupam Roy  Srijit Mukherji  SVF",
+        "file": "Abar Phire Ele (আবর ফর এল)  Dwitiyo Purush  Arijit Singh  Anupam Roy  Srijit Mukherji  SVF.mp3",
+        "path": "songs/soumyadeepta/Abar Phire Ele (আবর ফর এল)  Dwitiyo Purush  Arijit Singh  Anupam Roy  Srijit Mukherji  SVF.mp3"
+      },
+      {
+        "name": "Dooron Dooron  - Paresh Pahuja Feat. Harleen Sethi  Shiv  Meghdeep  Vaibhav",
+        "file": "Dooron Dooron (Official Video) - Paresh Pahuja Feat. Harleen Sethi  Shiv  Meghdeep  Vaibhav.mp3",
+        "path": "songs/soumyadeepta/Dooron Dooron (Official Video) - Paresh Pahuja Feat. Harleen Sethi  Shiv  Meghdeep  Vaibhav.mp3"
+      },
+      {
+        "name": "Kaley Sheshe  Addy Nagar  Official Video  @AddyNagar",
+        "file": "Kaley Sheshe  Addy Nagar  Official Video  @AddyNagar.mp3",
+        "path": "songs/soumyadeepta/Kaley Sheshe  Addy Nagar  Official Video  @AddyNagar.mp3"
+      },
+      {
+        "name": "Majhe Majhe Tobo   Arindom  Arjun  Darshana  Dhrubo Banerjee  The Rajbari Musical",
+        "file": "Majhe Majhe Tobo (মঝ মঝ তব)  Arindom  Arjun  Darshana  Dhrubo Banerjee  The Rajbari Musical.mp3",
+        "path": "songs/soumyadeepta/Majhe Majhe Tobo (মঝ মঝ তব)  Arindom  Arjun  Darshana  Dhrubo Banerjee  The Rajbari Musical.mp3"
+      }
+    ]
+  },
+  "triparna": {
+    "title": "Triparna's Vive",
+    "description": "Experience the vive of k pop culture with triparna's pic",
+    "cover": "songs/triparna/cover.jpg",
+    "songs": [
+      {
+        "name": "Bad Desire",
+        "file": "Bad Desire.mp3",
+        "path": "songs/triparna/Bad Desire.mp3"
+      },
+      {
+        "name": "Charli xcx - 365",
+        "file": "Charli xcx - 365.mp3",
+        "path": "songs/triparna/Charli xcx - 365.mp3"
+      },
+      {
+        "name": "j-hope Killin' It Girl",
+        "file": "j-hope Killin' It Girl.mp3",
+        "path": "songs/triparna/j-hope Killin' It Girl.mp3"
+      },
+      {
+        "name": "JENNIE - like JENNIE",
+        "file": "JENNIE - like JENNIE.mp3",
+        "path": "songs/triparna/JENNIE - like JENNIE.mp3"
+      },
+      {
+        "name": "연준 - YEONJUN  GGUM",
+        "file": "연준 - YEONJUN  GGUM.mp3",
+        "path": "songs/triparna/연준 - YEONJUN  GGUM.mp3"
+      }
+    ]
+  }
+}
