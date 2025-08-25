@@ -111,7 +111,7 @@ async function displayFolders() {
 }
 
 async function main() {
-    let songs = await loadSongs("myfolder");
+    let songs = await loadSongs("songs");
     displayFolders();
 
     const seekbar = document.querySelector(".seekbar");
