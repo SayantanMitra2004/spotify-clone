@@ -642,7 +642,7 @@ body {
         display: flex;
         flex-direction: column;
         height: auto;
-        width: 100vw;
+        width: 100%;
         gap: 0;
     }
     .cross{
@@ -886,7 +886,7 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
+        width: 100%;
         z-index: 1000;
     }
 
@@ -905,7 +905,7 @@ body {
         position: fixed;
         bottom: 0;
         left: 0;
-        width: 100vw;
+        width: 100%;
         background-color: #121212;
         z-index: 999;
         display: flex;
@@ -923,7 +923,7 @@ body {
         color: white;
         font-weight: bold;
         font-size: 14px;
-        width: 100vw;
+        width: 100%;
     }
 
     .song-display img {
@@ -935,12 +935,12 @@ body {
 
     /* Seekbar */
     .seekbar-container {
-        width: 100vw;
+        width: 100%;
     }
 
     .seekbar {
-        width: 100vw;
-        height: 4px;
+        width: 100%;
+        height: 7px;
         background-color: grey;
         border-radius: 50px;
         position: relative;
@@ -962,7 +962,7 @@ body {
         justify-content: center;
         align-items: center;
         gap: 15px;
-        width: 100vw;
+        width: 100%;
     }
 
     .song-btn img {
@@ -982,7 +982,7 @@ body {
 .container-new{
     background-color: black;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
